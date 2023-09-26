@@ -1,0 +1,381 @@
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minwidth: 320px;
+$mw: 1140;
+$md1: $mw + 12;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+@import 'null.scss';
+
+body {
+	font-family: 'Poppins', sans-serif;
+	color: #ffffff;
+	background-color: #000;
+	font-size: 14px;
+
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	background-color: #000;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+	width: 100%;
+
+	@media (max-width: $md1+px) {
+		max-width: 970px;
+	}
+
+	@media (max-width: $md2+px) {
+		max-width: 750px;
+	}
+
+	@media (max-width: $md3+px) {
+		max-width: none;
+		padding: 0 10px;
+	}
+}
+
+//</ОСНОВНАЯ СЕТКА>==============================================================================================
+
+//<MAINBLOCK>====================================================================================================
+
+.mainblock {
+	background-image: url('../img/mainblock_background.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	.container {
+		.header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			padding-top: 47.05px;
+			padding-bottom: 886.65px;
+
+			&__navigation {
+				width: 100%;
+				max-width: 425px;
+			}
+
+			&__menu {
+				display: flex;
+				justify-content: space-between;
+
+				li a {
+					text-align: center;
+					font-size: 17px;
+					font-weight: 400;
+					line-height: 27px;
+					color: #ffffff;
+
+					.gradient-text {
+						background: radial-gradient(343.88% 97.53% at 50% 50%, #BF8836 0%, #F2DE8A 100%);
+						background-clip: text;
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+					}
+				}
+			}
+		}
+
+		@media (max-width: $md1+px) {
+			.header {
+				padding-bottom: 556.65px;
+			}
+
+		}
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+
+		padding-bottom: 41.41px;
+
+		.mainblock-btn {
+			display: block;
+			max-width: 298px;
+			width: 100%;
+
+			padding: 15px 0px;
+			border-radius: 24px;
+			text-align: center;
+			background-color: rgba(0, 0, 0, 1);
+			color: rgba(255, 255, 255, 1);
+
+			font-size: 15px;
+			font-weight: 700;
+			line-height: 20px;
+			text-transform: uppercase;
+		}
+	}
+}
+
+//</MAINBLOCK>====================================================================================================
+//<COFFEE-SHOP>====================================================================================================
+
+.coffee-shop {
+	max-width: 1860px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px 20px;
+}
+
+.coffee-items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 40px;
+
+	padding: 48.5px 0px;
+}
+
+.coffee-item {
+	border-radius: 11.754px;
+	overflow: hidden;
+	cursor: pointer;
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+
+		padding: 50.52px 28.35px 29.9px;
+
+		background: rgba(0, 0, 0, 0.65);
+
+		transition: all 0.5s ease 0s;
+		transform: translateX(-100%);
+	}
+
+	&:hover &__body {
+		transform: translateX(0%);
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 23.509px;
+		font-weight: 700;
+		line-height: 26.741px;
+
+		margin-bottom: 11px;
+	}
+
+	&__subtitle {
+		text-align: center;
+		font-size: 16.652px;
+		line-height: 26.741px;
+
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 26.741px;
+
+		margin-bottom: 38.09px;
+
+		li {
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		border-radius: 12px;
+		border: 1.243px solid rgba(255, 255, 255, 1);
+
+		padding: 12px 0px;
+		margin-bottom: 17.38px;
+
+		text-align: center;
+		font-size: 15.672px;
+		line-height: 15.672px;
+		text-transform: uppercase;
+
+		color: rgba(255, 255, 255, 1);
+		background-color: transparent;
+		transition: all 0.5s ease 0s;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+
+		svg {
+			padding-left: 7px;
+		}
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+	}
+}
+
+.parrot-image {
+	background-image: url('../img/coffee_shop/coffee-shop_parrot.png');
+}
+
+.rooster-image {
+	background-image: url('../img/coffee_shop/coffee-shop_rooster.png');
+}
+
+.flamingo-image {
+	background-image: url('../img/coffee_shop/coffee-shop_flamingo.png');
+}
+
+.parrot-image1 {
+	background-image: url('../img/coffee_shop/coffee-shop_parrot1.png');
+}
+
+.rooster-image1 {
+	background-image: url('../img/coffee_shop/coffee-shop_rooster1.png');
+}
+
+.flamingo-image1 {
+	background-image: url('../img/coffee_shop/coffee-shop_flamingo1.png');
+}
+
+.parrot-image2 {
+	background-image: url('../img/coffee_shop/coffee-shop_parrot2.png');
+}
+
+.rooster-image2 {
+	background-image: url('../img/coffee_shop/coffee-shop_rooster2.png');
+}
+
+.flamingo-image2 {
+	background-image: url('../img/coffee_shop/coffee-shop_flamingo2.png');
+}
+
+.parrot-image,
+.rooster-image,
+.flamingo-image,
+.parrot-image1,
+.rooster-image1,
+.flamingo-image1,
+.parrot-image2,
+.rooster-image2,
+.flamingo-image2 {
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+//</COFFEE-SHOP>====================================================================================================
+//<QUALITY-ASSURANCE>=========================================================================================================
+
+.quality-assurance {
+	max-width: 1860px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px 20px;
+
+	&__container {
+		padding: 112.5px 0px 347px;
+
+		text-align: center;
+
+		border-radius: 12px;
+		background: url('../img/quality-assurance_background.png') center / cover no-repeat rgba(211, 211, 211, 0.1);
+		background-blend-mode: screen;
+	}
+
+	&__title {
+		font-size: 34px;
+		font-weight: 700;
+		line-height: 29px;
+		margin: 0px 0px 40px;
+	}
+
+	&__text {
+		margin: 0 auto;
+		max-width: 1500px;
+		font-size: 28px;
+		line-height: 29px;
+	}
+}
+
+//</QUALITY-ASSURANCE>=========================================================================================================
+//<INDIVIDUAL-APPROACH>=========================================================================================================
+
+.individual-approach {
+	max-width: 1860px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px 20px;
+
+	&__container {
+		padding: 112.72px 143.84px;
+
+		text-align: left;
+
+		border-radius: 12px;
+		background: url('../img/individual-approach_background.png') center / cover no-repeat rgba(211, 211, 211, 0.1);
+		background-blend-mode: screen;
+	}
+
+	&__content {
+		max-width: 922px;
+		width: 100%;
+	}
+
+	&__title {
+		font-size: 34px;
+		font-weight: 700;
+		line-height: 29px;
+		margin: 0px 0px 45.75px 0px;
+	}
+
+	&__text {
+		font-size: 24px;
+		line-height: 29px;
+		margin: 0px 0px 45.75px 0px;
+	}
+
+	&__btn {
+		max-width: 322px;
+		width: 100%;
+		padding: 20px 0px;
+
+		border-radius: 12px;
+		border: 1.269px solid #FFF;
+
+		text-align: center;
+
+		font-size: 16px;
+		line-height: 16px;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 1);
+
+		background-color: transparent;
+		transition: all 0.5s ease 0s;
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+	}
+}
+
+//</INDIVIDUAL-APPROACH>=========================================================================================================
