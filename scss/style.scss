@@ -379,3 +379,42 @@ body {
 }
 
 //</INDIVIDUAL-APPROACH>=========================================================================================================
+//<PROFITABLE-PRICE>=========================================================================================================
+.profitable-price {
+	max-width: 1860px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px 20px;
+
+	&__container {
+		padding: 151.07px 88px 130px;
+
+		border-radius: 12px;
+		background: url('../img/profitable-price_background.png') center / cover no-repeat rgba(211, 211, 211, 0.1);
+		background-blend-mode: screen;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	&__content {
+		max-width: 700px;
+		width: 100%;
+	}
+
+	&__title {
+		font-size: 34px;
+		font-weight: 700;
+		line-height: 29px;
+		margin-bottom: 45px;
+	}
+
+	&__text {
+		font-size: 28px;
+		line-height: 29px;
+	}
+}
+
+//</PROFITABLE-PRICE>=========================================================================================================
