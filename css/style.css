@@ -643,6 +643,9 @@ footer .footer-container img {
     font-size: 17px;
     line-height: 17px;
   }
+  .video__container iframe {
+    height: 520px;
+  }
 }
 @media (max-width: 479.98px) {
   .individual-approach__title {

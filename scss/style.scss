@@ -717,7 +717,7 @@ footer {
 		}
 
 		&__title {
-			font-size:28px;
+			font-size: 28px;
 			font-weight: 700;
 			line-height: 28px;
 			margin-bottom: 20px;
@@ -726,6 +726,14 @@ footer {
 		&__text {
 			font-size: 17px;
 			line-height: 17px;
+		}
+	}
+
+	.video {
+		&__container {
+			iframe {
+				height: 520px;
+			}
 		}
 	}
 }
