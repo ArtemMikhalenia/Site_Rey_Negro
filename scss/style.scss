@@ -29,19 +29,19 @@ body {
 }
 
 :focus::-webkit-input-placeholder {
-	color: transparent
+	color: transparent;
 }
 
 :focus::-moz-placeholder {
-	color: transparent
+	color: transparent;
 }
 
 :focus:-moz-placeholder {
-	color: transparent
+	color: transparent;
 }
 
 :focus:-ms-input-placeholder {
-	color: transparent
+	color: transparent;
 }
 
 //</ОБОЛОЧКА>===========================================================================================================
@@ -101,11 +101,18 @@ body {
 					line-height: 27px;
 					color: #ffffff;
 
+					transition: all 0.5s ease 0s;
+					border-bottom: 1px solid rgba(255, 0, 0, 0);
+
 					.gradient-text {
 						background: radial-gradient(343.88% 97.53% at 50% 50%, #BF8836 0%, #F2DE8A 100%);
 						background-clip: text;
 						-webkit-background-clip: text;
 						-webkit-text-fill-color: transparent;
+					}
+
+					&:hover {
+						border-bottom: 1px solid #BF8836;
 					}
 				}
 			}
@@ -133,6 +140,12 @@ body {
 			font-weight: 700;
 			line-height: 20px;
 			text-transform: uppercase;
+
+			transition: all 0.5s ease 0s;
+
+			&:hover {
+				background-color: rgba(0, 0, 0, 0.5);
+			}
 		}
 	}
 }
@@ -468,10 +481,13 @@ body {
 	}
 
 	&__title {
+		position: relative;
+		z-index: 5;
+
 		text-align: center;
 		font-size: 34px;
 		font-weight: 700;
-		line-height: 29px;
+		line-height: 37px;
 		margin-bottom: 41.66px;
 	}
 
@@ -499,6 +515,7 @@ body {
 	&__info {
 		flex: 0 1 50%;
 		max-width: 400px;
+		margin-right: 20px;
 	}
 
 	&__form {
@@ -521,6 +538,9 @@ body {
 }
 
 .info-title {
+	position: relative;
+	z-index: 5;
+
 	font-size: 34px;
 	font-weight: 700;
 	line-height: 42px;
@@ -528,12 +548,18 @@ body {
 }
 
 .info-text {
+	position: relative;
+	z-index: 5;
+
 	font-size: 28px;
 	font-weight: 400;
 	line-height: 29px;
 }
 
 .form {
+	position: relative;
+	z-index: 5;
+
 	display: flex;
 	flex-direction: column;
 
@@ -571,6 +597,7 @@ input.form-submit {
 
 	cursor: pointer;
 	transition: all 0.5s ease 0s;
+	background: #443d4b00;
 
 	&:hover {
 		background: #443d4b;
@@ -617,10 +644,37 @@ footer {
 		}
 	}
 
+	.contacts-content {
+
+		.coffee-left {
+			top: -175px;
+			left: -120px;
+			z-index: 0;
+		}
+
+		.coffee-right {
+			top: 235px;
+			right: -60px;
+			z-index: 0;
+		}
+	}
+
 	.individual-approach {
 		&__container {
 			padding: 112.72px 28px;
 		}
+	}
+}
+
+@media (max-width: $md2+px) {
+	.info-title {
+		font-size: 25px;
+		line-height: 30px;
+	}
+
+	.info-text {
+		font-size: 20px;
+		line-height: 25px;
 	}
 }
 
@@ -735,6 +789,62 @@ footer {
 				height: 520px;
 			}
 		}
+	}
+
+	.contacts {
+
+		&__container {
+			padding: 33px 0px 27px;
+		}
+
+		&__body {
+			padding: 0px 10px;
+		}
+
+		&__title {
+			font-size: 28px;
+			line-height: 28px;
+			margin-bottom: 37px;
+		}
+
+		&__content {
+			flex-direction: column;
+		}
+	}
+
+	.contacts-content {
+
+		&__info,
+		&__form {
+			width: 100%;
+			padding: 0px 15px;
+			margin-right: 0px;
+		}
+
+		.coffee-left {
+			display: none;
+		}
+
+		.coffee-right {
+			display: none;
+		}
+	}
+
+	.info-title {
+		font-size: 17px;
+		line-height: 17px;
+		text-align: center;
+	}
+
+	.info-text {
+		font-size: 17px;
+		line-height: 17px;
+		text-align: center;
+		margin-bottom: 33px;
+	}
+
+	input.form-submit {
+		font-size: 15px;
 	}
 }
 
