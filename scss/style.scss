@@ -28,6 +28,22 @@ body {
 	overflow: hidden;
 }
 
+:focus::-webkit-input-placeholder {
+	color: transparent
+}
+
+:focus::-moz-placeholder {
+	color: transparent
+}
+
+:focus:-moz-placeholder {
+	color: transparent
+}
+
+:focus:-ms-input-placeholder {
+	color: transparent
+}
+
 //</ОБОЛОЧКА>===========================================================================================================
 
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
@@ -93,13 +109,6 @@ body {
 					}
 				}
 			}
-		}
-
-		@media (max-width: $md1+px) {
-			.header {
-				padding-bottom: 556.65px;
-			}
-
 		}
 	}
 
@@ -307,6 +316,7 @@ body {
 		font-weight: 700;
 		line-height: 29px;
 		margin: 0px 0px 40px;
+		padding: 0px 23px;
 	}
 
 	&__text {
@@ -314,6 +324,7 @@ body {
 		max-width: 1500px;
 		font-size: 28px;
 		line-height: 29px;
+		padding: 0px 23px;
 	}
 }
 
@@ -424,38 +435,150 @@ body {
 
 	&__container {
 		position: relative;
-		max-width: 1103px;
+		max-width: 1143px;
 		width: 100%;
 		margin: 0 auto;
-		padding: 48px 0px;
-	}
+		padding: 48px 20px;
 
-	&__content {
-		// position: absolute;
-		// width: 100%;
-		// height: 100%;
-		// top: 0;
-		// left: 0;
-	}
-
-	&__btn {
-		position: relative;
-		width: 250px;
-		height: 250px;
-		border-radius: 50%;
-
-		img {
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
+		iframe {
+			border-radius: 12px;
 		}
 	}
 }
 
 //</VIDEO>====================================================================================================================
+//<CONTACTS>=============================================================================================================================
 
+.contacts {
+	max-width: 1860px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0px 20px;
+
+	&__container {
+		padding: 67.5px 0px 75.3px;
+
+		border-radius: 12px;
+		background: rgba(25, 22, 28, 0.80);
+		backdrop-filter: blur(5px);
+	}
+
+	&__body {
+		padding: 0px 20px;
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 34px;
+		font-weight: 700;
+		line-height: 29px;
+		margin-bottom: 41.66px;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		max-width: 975px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.contacts-title {
+
+	&__gradient {
+		color: rgba(248, 228, 190, 0.80);
+	}
+}
+
+.contacts-content {
+	position: relative;
+
+	&__info {
+		flex: 0 1 50%;
+		max-width: 400px;
+	}
+
+	&__form {
+		flex: 0 1 50%;
+		max-width: 490px;
+
+	}
+
+	.coffee-left {
+		position: absolute;
+		top: -175px;
+		left: -220px;
+	}
+
+	.coffee-right {
+		position: absolute;
+		top: 255px;
+		right: -120px;
+	}
+}
+
+.info-title {
+	font-size: 34px;
+	font-weight: 700;
+	line-height: 42px;
+	margin-bottom: 20px;
+}
+
+.info-text {
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 29px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+
+	input {
+		padding: 20px 0px;
+		margin-bottom: 31px;
+
+		color: rgb(255, 255, 255);
+		text-align: center;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 16px;
+		text-transform: uppercase;
+
+		border-radius: 12px;
+		border: 1.269px solid rgba(255, 255, 255, 0.10);
+		background: #19161C;
+
+		transition: all 0.5s ease 0s;
+	}
+
+	input:focus {
+		border: 1.269px solid rgba(255, 255, 255, 1);
+	}
+}
+
+input.form-submit {
+	margin-bottom: 0px;
+
+	color: #FFF;
+
+	text-transform: uppercase;
+	border-radius: 12px;
+	border: 1.269px solid #FFF;
+
+	cursor: pointer;
+	transition: all 0.5s ease 0s;
+
+	&:hover {
+		background: #443d4b;
+	}
+}
+
+
+//</CONTACTS>=============================================================================================================================
 //<FOOTER>=========================================================================================================================
 
 footer {
@@ -471,3 +594,56 @@ footer {
 }
 
 //</FOOTER>=========================================================================================================================
+
+@media (max-width: $md1+px) {
+	.mainblock {
+		.container {
+			.header {
+				padding-bottom: 556.65px;
+
+				&__navigation {
+					max-width: 325px;
+				}
+			}
+		}
+	}
+
+	.coffee-items {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 40px;
+	}
+}
+
+@media (max-width: $md2+px) {
+	.coffee-items {
+		grid-template-columns: repeat(1, 1fr);
+		row-gap: 33px;
+	}
+}
+
+@media (max-width: 600px) {
+	.mainblock {
+		.container {
+			.header {
+				padding-top: 40px;
+				padding-bottom: 380px;
+				justify-content: center;
+
+				&__navigation {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.quality-assurance {
+		&__container {
+			padding: 50px 0px 314px;
+		}
+
+		&__text {
+			font-size: 17px;
+			line-height: 17px;
+		}
+	}
+}
