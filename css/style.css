@@ -599,6 +599,11 @@ footer .footer-container img {
     padding: 112.72px 28px;
   }
 }
+@media (max-width: 1024px) {
+  .coffee-item__body {
+    transform: translateX(0%);
+  }
+}
 @media (max-width: 991.98px) {
   .info-title {
     font-size: 25px;

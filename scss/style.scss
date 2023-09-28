@@ -667,6 +667,15 @@ footer {
 	}
 }
 
+@media (max-width: 1024px) {
+	.coffee-item {
+
+		&__body {
+			transform: translateX(0%);
+		}
+	}
+}
+
 @media (max-width: $md2+px) {
 	.info-title {
 		font-size: 25px;
